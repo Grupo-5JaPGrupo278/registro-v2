@@ -1,7 +1,17 @@
- NAME = document.getElementById("nombre")
- PWD2 = document.getElementById("password2")
- PWD1 = document.getElementById("password1")
- REGBTN = document.getElementById("registerBtn")
- EMAIL = document.getElementById("email")
- LASTNAME = document.getElementById("apellido")
-
+(function () {
+    'use strict'
+  
+    var forms = document.querySelectorAll('.needs-validation')
+ 
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
