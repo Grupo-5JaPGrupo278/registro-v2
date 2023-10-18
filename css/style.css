@@ -1,3 +1,22 @@
 .container {
   max-width: 960px;
 }
+.show-feedback {
+  display: block;
+  color: red;
+}
+#terms-btn{
+  width: 200px;
+}
+#terms-div{
+  display: flex;
+  align-items: center;
+}
+#terminos:invalid{
+  color:red;
+  border: 0.5px solid red;
+}
+#terminos:valid{
+  color:green;
+  background-color: green;
+}
